@@ -34,3 +34,16 @@ condition ? str1 : str2
 
 ---------------------------------
 LOOPS: for loop and while loop 
+
+
+----------------------------------
+
+Memory in fucntion: 
+there are two types of meemory  
+1st stack --> static allocation of memeory    
+stack meory   --> main --> stack of functions 
+2nd heap  --> dynamic memory allocation of memory
+
+
+there is function passby value and pass by address : 
+
