@@ -123,3 +123,12 @@ public:
 kadanes algorithm 
 https://leetcode.com/problems/maximum-subarray/description/
 
+
+------------------------
+for majority element 
+https://leetcode.com/problems/majority-element/submissions/1530197732/
+3methos can be think of 
+1. checkt he element count and occurance then  store 
+2. short it (nlogn) then traverse to n  then you cna find the all same number at a go then validated check greater than n/2 
+3. Morrie algorithm --> traverse the loop once so if same element then ++ if negative -- . so only mejority element will have the max value
+ so  if frq ==0  target == current value . else  increase or decrease the freq 
