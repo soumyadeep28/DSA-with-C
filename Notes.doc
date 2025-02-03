@@ -1,0 +1,125 @@
+ti execute that use g++ code.cpp && ./a.out
+
+#import <iostream> 
+using namespace std
+
+
+these are primitive data types: 
+int > 4bytes
+char > 1 
+float 4
+bool 1 
+double 2 
+in float if we dont pass f it will be considered as double 
+
+sizeof() gives the size or memeory  of the variable 
+
+
+typecasting: 
+double price = 100.25889 
+int newprice = (int)price 
+
+typer conversion : compiler do this  
+char var = 'a'
+int var2 = var --> here it got increased 
+
+--------------------------------
+to take input 
+cin >> data ; 
+
+
+--------------------------------
+condition 
+condition ? str1 : str2 
+
+---------------------------------
+LOOPS: for loop and while loop 
+
+
+----------------------------------
+
+Memory in fucntion: 
+there are two types of meemory  
+1st stack --> static allocation of memeory    
+stack meory   --> main --> stack of functions 
+2nd heap  --> dynamic memory allocation of memory
+
+
+there is function passby value and pass by address : 
+
+BiTwise OR and XOR operator  --> & , | , ^
+bitwise left shift operator <<  --> n<<i   shift i places to n  i.e 100<<1  --> 1000 -->8 
+10<<2 101000 (binary) --> 40
+10>>1 -->5 
+8>>1 --> 4
+8>>2 --> 2 
+
+-----------------------
+array is acontiguous memeory store 
+array is of same typecasting
+int marks[5];
+in c++ to mention largest number is mentioned as INT_MAX
+for small INT_MIN
+also min() , max()
+array is a passby reference only 
+
+
+-----------------------
+STL:
+standard template lib 
+vectors , queue , stack , set are part the vector container same
+
+VECTOR: 
+array is a fixed  ... vec can be resized 
+
+to import vector you need to mention 
+#include <vector> 
+or #include <bits/c++.h>
+
+you can define vector: 
+vector<int>  vec ;
+vector<int> vec = {1,2,3} ;
+vector<int> vec(3,0) ;   --> this is for 3  0  in a array 
+during executin  we need to run  via 
+g++ -std=c++11 vector1.cpp && ./a.exec 
+
+
+vector fucntions 
+size , push_back , pop_back , front , back , at
+size() --> size 
+push_back --> add element at the end ;
+pop_back --> add at the end ; 
+front --> check the front element ; 
+back --> check the end of the index ; 
+at --> find at the index of theat vector 
+capacity --> it will  give the capacity  of the vector . so it add the new element and create new memeory  with double size and then add that  
+
+problem: https://leetcode.com/problems/single-number/
+to send pass y reference 
+vector<int>& nums or vector<int> &nums
+
+method of the problem : solve based on  bitwise operator 
+for example 4 , +1 , -1 --> then if we add +1 -1 = 0 and we will find 4 
+same for the  [4,1,2,1,2] --> [4,1,2,-1,-2] --> 4
+we can use XOR operation 
+i. n^n = 0 
+ii. n^0 = n 
+so using this property  we can do a xor and find the unique one
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int resp=0 ;
+        for (int val : nums){
+            resp = resp ^ val ;
+        }
+        return resp;
+    }
+};
+
+
+
+
+-----------------------------
+kadanes algorithm 
+https://leetcode.com/problems/maximum-subarray/description/
+
